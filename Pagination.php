@@ -21,24 +21,7 @@ class BestPagination
   {
 
     $query = new WP_Query([
-      'post_type' => 'mentor',
-      'tax_query' => [
-        'relation' => 'AND',
-        [
-          'taxonomy' => 'wordpress',
-          'term' => 'skill'
-        ],
-        [
-          'taxonomy' => 'wpforms',
-          'term' => 'company'
-        ],
-      ],
-      'meta_query' => [
-        [
-          'key' => 'micro',
-          'value' => 'new',
-        ]
-      ],
+      'post_type' => 'post',
       'orderby' => 'title',
       'order' => 'ASC',
       'posts_per_page' => 1,
